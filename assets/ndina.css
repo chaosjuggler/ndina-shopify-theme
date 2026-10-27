@@ -69,5 +69,5 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-topbar__bag { background: #1A1A1A; color: #FBF8F3 !important; padding: 0.7rem 1.4rem; }
 .ndina-topbar__bag:hover { background: var(--ndina-terracotta, #B84A30); color: #FBF8F3 !important; }
 /* Header logo */
-.ndina-header-logo { height: 6.4rem; width: auto; display: block; }
-@media (max-width: 749px) { .ndina-header-logo { height: 4.4rem; } .ndina-topbar__inner { padding: 0.8rem 1.6rem; } .ndina-topbar__nav a:first-child { display: none; } }
+.ndina-header-logo { height: 3.6rem; width: auto; display: block; }
+@media (max-width: 749px) { .ndina-header-logo { height: 2.2rem; } .ndina-topbar__inner { padding: 0.8rem 1.6rem; } .ndina-topbar__nav a:first-child { display: none; } }
