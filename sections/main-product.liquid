@@ -108,7 +108,9 @@
                   </div>
                   {% render 'ndina-subtitle', product: product %}
                   {%- assign ndina_variant = product.selected_or_first_available_variant -%}
-                  {%- if ndina_variant.inventory_management and ndina_variant.inventory_quantity == 1 -%}
+                  {%- if product.metafields.ndina.edition_numbers_in_stock != blank -%}
+                    <p class="ndina-edition">Numbered limited edition &middot; your number is assigned in sequence at dispatch</p>
+                  {%- elsif ndina_variant.inventory_management and ndina_variant.inventory_quantity == 1 -%}
                     <p class="ndina-edition">One of a kind &middot; original work</p>
                   {%- endif -%}
                 {%- when 'price' -%}
