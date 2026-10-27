@@ -15,6 +15,8 @@
     assign nd_year = '2026'
   elsif product.title contains 'Fine Art Gicl'
     assign nd_medium = 'Fine art gicl&eacute;e print'
+  elsif product.tags contains 'chiancianobiennale2026'
+    assign nd_medium = 'Limited edition print'
   elsif product.tags contains 'print'
     assign nd_medium = 'Signed inkjet print'
   elsif nd_desc contains ' by '
@@ -26,8 +28,6 @@
     if nd_yn > 1900
       assign nd_year = nd_y
     endif
-  elsif product.tags contains 'chiancianobiennale2026'
-    assign nd_medium = 'Limited edition print'
   endif
 -%}
 {%- if nd_artist != blank -%}
