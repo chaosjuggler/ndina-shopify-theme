@@ -1,0 +1,20 @@
+<div class="ndina-topbar">
+  <div class="ndina-topbar__inner">
+    <a class="ndina-topbar__logo" href="{{ section.settings.home_url }}" aria-label="NDINA Gallery main website">
+      <img src="{{ 'ndina-logo.png' | asset_url }}" alt="NDINA Gallery" width="140" height="56">
+    </a>
+    <nav class="ndina-topbar__nav" aria-label="Site">
+      <a href="{{ section.settings.home_url }}">ndina.gallery</a>
+      <a class="ndina-topbar__bag" href="{{ routes.cart_url }}">Bag ({{ cart.item_count }})</a>
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "NDINA top bar",
+  "settings": [
+    { "type": "url", "id": "home_url", "label": "Logo link", "default": "https://www.ndina.gallery" }
+  ]
+}
+{% endschema %}

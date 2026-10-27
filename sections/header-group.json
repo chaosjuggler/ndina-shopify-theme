@@ -2,6 +2,12 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "ndina-topbar": {
+      "type": "ndina-topbar",
+      "settings": {
+        "home_url": "https://www.ndina.gallery"
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
@@ -48,6 +54,7 @@
     }
   },
   "order": [
+    "ndina-topbar",
     "announcement-bar",
     "header"
   ]

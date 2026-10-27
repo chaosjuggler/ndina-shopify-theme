@@ -185,7 +185,7 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
+        {%- if false -%}
           <div class="header__heading-logo-wrapper">
             {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -205,7 +205,7 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">NDINA Shop</span>
+          <img class="ndina-header-logo" src="{{ 'ndina-logo.png' | asset_url }}" alt="NDINA Gallery Shop" width="160" height="64">
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -228,7 +228,7 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
+        {%- if false -%}
           <div class="header__heading-logo-wrapper">
             {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -248,7 +248,7 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">NDINA Shop</span>
+          <img class="ndina-header-logo" src="{{ 'ndina-logo.png' | asset_url }}" alt="NDINA Gallery Shop" width="160" height="64">
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

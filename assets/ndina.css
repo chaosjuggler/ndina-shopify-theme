@@ -57,3 +57,17 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 
 .ndina-artists--square .ndina-artist__image { aspect-ratio: 1 / 1; }
 .ndina-artist__by { margin-top: 0.3rem; font-size: 1.2rem; letter-spacing: 0.04em; opacity: 0.7; }
+
+/* Top bar (Gagosian-style) */
+.ndina-topbar { background: #FBF8F3; border-bottom: 1px solid rgba(26,26,26,0.18); }
+.ndina-topbar__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; padding: 0.9rem 2rem; min-height: 5.6rem; }
+.ndina-topbar__logo { display: inline-flex; line-height: 0; }
+.ndina-topbar__logo img { height: 3.4rem; width: auto; display: block; }
+.ndina-topbar__nav { display: flex; align-items: center; gap: 2.4rem; font-size: 1.3rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.ndina-topbar__nav a { color: #1A1A1A; text-decoration: none; }
+.ndina-topbar__nav a:hover { color: var(--ndina-terracotta, #B84A30); }
+.ndina-topbar__bag { background: #1A1A1A; color: #FBF8F3 !important; padding: 0.7rem 1.4rem; }
+.ndina-topbar__bag:hover { background: var(--ndina-terracotta, #B84A30); color: #FBF8F3 !important; }
+/* Header logo */
+.ndina-header-logo { height: 6.4rem; width: auto; display: block; }
+@media (max-width: 749px) { .ndina-header-logo { height: 4.4rem; } .ndina-topbar__inner { padding: 0.8rem 1.6rem; } .ndina-topbar__nav a:first-child { display: none; } }
