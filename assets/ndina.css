@@ -1,0 +1,22 @@
+/* NDINA Gallery — brand layer over Dawn. Fonts/colours come from theme settings (Jost, terracotta/cream). */
+:root {
+  --ndina-terracotta: #B84A30;
+  --ndina-cream: #FBF8F3;
+  --ndina-ink: #1A1A1A;
+}
+h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; }
+.header__heading-link, .header__menu-item, .footer-block__heading { letter-spacing: 0.12em; text-transform: uppercase; }
+.header__menu-item { font-size: 1.3rem; }
+.announcement-bar__message { letter-spacing: 0.14em; text-transform: uppercase; font-size: 1.2rem; }
+.button, .shopify-challenge__button { letter-spacing: 0.14em; text-transform: uppercase; font-size: 1.3rem; }
+.card__heading { letter-spacing: 0.06em; text-transform: uppercase; font-size: 1.4rem; }
+.card--standard .card__inner, .card .media { background: #F1E9DD; }
+.card__media .media img { object-fit: contain; background: #F1E9DD; }
+.price { letter-spacing: 0.04em; }
+.badge { border-radius: 0; letter-spacing: 0.14em; text-transform: uppercase; background: var(--ndina-ink); color: var(--ndina-cream); border-color: var(--ndina-ink); }
+.ndina-edition {
+  margin: 0.4rem 0 1.2rem; font-size: 1.2rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ndina-terracotta);
+}
+.ndina-edition--sold { color: var(--ndina-ink); opacity: 0.7; }
+.product__media img { object-fit: contain; }
+.footer { border-top: 1px solid rgba(26,26,26,0.15); }
