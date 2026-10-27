@@ -1,0 +1,24 @@
+<section class="ndina-hero" style="--ndina-hero-image: url('{{ 'ndina-hero.jpg' | asset_url }}')">
+  <div class="ndina-hero__overlay">
+    <div class="page-width">
+      <h1 class="ndina-hero__title">{{ section.settings.heading }}</h1>
+      <p class="ndina-hero__text">{{ section.settings.text }}</p>
+      {%- if section.settings.button_label != blank -%}
+        <a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "NDINA hero",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Contemporary art from the Pacific" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Original, one-of-a-kind works by Fiji's leading artists." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop all works" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "NDINA hero" }]
+}
+{% endschema %}

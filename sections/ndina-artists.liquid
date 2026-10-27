@@ -1,0 +1,35 @@
+<section class="ndina-artists page-width">
+  <h2 class="ndina-artists__heading">{{ section.settings.heading }}</h2>
+  <div class="ndina-artists__grid">
+    {%- for block in section.blocks -%}
+      <a class="ndina-artist" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+        <div class="ndina-artist__image">
+          <img src="{{ block.settings.image_asset | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy" width="600" height="700">
+        </div>
+        <span class="ndina-artist__name">{{ block.settings.name }}</span>
+        <span class="ndina-artist__cta">View works</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "NDINA artist tiles",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Shop by artist" }
+  ],
+  "blocks": [
+    {
+      "type": "artist",
+      "name": "Artist",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name" },
+        { "type": "text", "id": "image_asset", "label": "Image file in theme assets", "default": "artist-josaia.jpg" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "NDINA artist tiles" }]
+}
+{% endschema %}

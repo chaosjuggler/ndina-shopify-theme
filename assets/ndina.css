@@ -25,3 +25,21 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .price .ndina-dot { flex: none; width: 0.9rem; height: 0.9rem; border-radius: 50%; display: inline-block; }
 .ndina-dot--available { background: #2E9E5B; }
 .ndina-dot--sold { background: #D13B2F; }
+
+/* Hero */
+.ndina-hero { background: var(--ndina-hero-image) center/cover no-repeat; min-height: 60vh; display: flex; }
+.ndina-hero__overlay { width: 100%; display: flex; align-items: flex-end; background: linear-gradient(to top, rgba(26,26,26,0.72), rgba(26,26,26,0.05) 65%); padding: 6rem 0 4rem; color: #FBF8F3; }
+.ndina-hero__title { color: #FBF8F3; font-size: clamp(3rem, 6vw, 6rem); margin: 0 0 1rem; max-width: 18ch; }
+.ndina-hero__text { max-width: 52ch; font-size: 1.7rem; margin: 0 0 2.4rem; }
+
+/* Artist tiles */
+.ndina-artists { padding-top: 5rem; padding-bottom: 5rem; }
+.ndina-artists__heading { text-align: center; margin: 0 0 3rem; }
+.ndina-artists__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.ndina-artist { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.ndina-artist__image { aspect-ratio: 4 / 5; overflow: hidden; background: #F1E9DD; }
+.ndina-artist__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.ndina-artist:hover .ndina-artist__image img { transform: scale(1.04); }
+.ndina-artist__name { margin-top: 1.4rem; font-size: 1.6rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+.ndina-artist__cta { margin-top: 0.4rem; font-size: 1.2rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ndina-terracotta); }
+@media (max-width: 749px) { .ndina-artists__grid { grid-template-columns: 1fr; } .ndina-hero { min-height: 50vh; } }
