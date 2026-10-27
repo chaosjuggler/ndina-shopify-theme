@@ -120,7 +120,6 @@
   "order": [
     "hero",
     "artists",
-    "collections",
     "featured_collection"
   ]
 }
