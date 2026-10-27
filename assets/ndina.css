@@ -17,6 +17,11 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-edition {
   margin: 0.4rem 0 1.2rem; font-size: 1.2rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ndina-terracotta);
 }
-.ndina-edition--sold { color: var(--ndina-ink); opacity: 0.7; }
 .product__media img { object-fit: contain; }
 .footer { border-top: 1px solid rgba(26,26,26,0.15); }
+
+/* Availability dot beside price */
+.price { display: flex; align-items: center; gap: 0.7rem; }
+.price .ndina-dot { flex: none; width: 0.9rem; height: 0.9rem; border-radius: 50%; display: inline-block; }
+.ndina-dot--available { background: #2E9E5B; }
+.ndina-dot--sold { background: #D13B2F; }
