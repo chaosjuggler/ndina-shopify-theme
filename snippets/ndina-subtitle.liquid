@@ -1,7 +1,8 @@
 {%- comment -%} Artist &middot; medium &middot; year line, derived from product tags and description. {%- endcomment -%}
 {%- liquid
   assign nd_artist = ''
-  for nd_name in 'Josaia Waqabaca McNamara,Anare Somumu,Mason James Lee' | split: ','
+  assign nd_names = 'Josaia Waqabaca McNamara,Anare Somumu,Mason James Lee' | split: ','
+  for nd_name in nd_names
     if product.tags contains nd_name
       assign nd_artist = nd_name
     endif
@@ -21,7 +22,8 @@
     assign nd_medium = nd_parts[0] | remove: 'Original ' | strip | capitalize
     assign nd_tail = nd_parts[1] | split: ', '
     assign nd_y = nd_tail[1] | slice: 0, 4
-    if nd_y.size == 4 and nd_y >= '1900'
+    assign nd_yn = nd_y | plus: 0
+    if nd_yn > 1900
       assign nd_year = nd_y
     endif
   elsif product.tags contains 'chiancianobiennale2026'
