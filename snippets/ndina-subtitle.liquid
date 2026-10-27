@@ -1,0 +1,37 @@
+{%- comment -%} Artist · medium · year line, derived from product tags and description. {%- endcomment -%}
+{%- liquid
+  assign nd_artist = ''
+  for nd_name in 'Josaia Waqabaca McNamara,Anare Somumu,Mason James Lee' | split: ','
+    if product.tags contains nd_name
+      assign nd_artist = nd_name
+    endif
+  endfor
+  assign nd_desc = product.description | strip_html | replace: 'SOLD.', ''
+  assign nd_medium = ''
+  assign nd_year = ''
+  if product.tags contains 'flask'
+    assign nd_medium = 'Collectible flask'
+    assign nd_year = '2026'
+  elsif product.tags contains 'giclée'
+    assign nd_medium = 'Fine art giclée print'
+  elsif product.tags contains 'print'
+    assign nd_medium = 'Signed inkjet print'
+  elsif nd_desc contains ' by '
+    assign nd_parts = nd_desc | split: ' by '
+    assign nd_medium = nd_parts[0] | remove: 'Original ' | strip | capitalize
+    assign nd_tail = nd_parts[1] | split: ', '
+    assign nd_y = nd_tail[1] | slice: 0, 4
+    if nd_y.size == 4 and nd_y >= '1900'
+      assign nd_year = nd_y
+    endif
+  elsif product.tags contains 'chiancianobiennale2026'
+    assign nd_medium = 'Limited edition print'
+  endif
+-%}
+{%- if nd_artist != blank -%}
+  <p class="ndina-subtitle">
+    {{- nd_artist -}}
+    {%- if nd_medium != blank %} · {{ nd_medium }}{% endif -%}
+    {%- if nd_year != blank %} · {{ nd_year }}{% endif -%}
+  </p>
+{%- endif -%}

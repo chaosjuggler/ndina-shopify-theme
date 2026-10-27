@@ -106,6 +106,7 @@
                       </h2>
                     </a>
                   </div>
+                  {% render 'ndina-subtitle', product: product %}
                   {%- assign ndina_variant = product.selected_or_first_available_variant -%}
                   {%- if ndina_variant.inventory_management and ndina_variant.inventory_quantity == 1 -%}
                     <p class="ndina-edition">One of a kind &middot; original work</p>

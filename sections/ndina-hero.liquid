@@ -1,7 +1,6 @@
 <section class="ndina-hero" style="--ndina-hero-image: url('{{ 'ndina-hero.jpg' | asset_url }}')">
   <div class="ndina-hero__overlay">
     <div class="page-width">
-      <h1 class="ndina-hero__title">{{ section.settings.heading }}</h1>
       <p class="ndina-hero__text">{{ section.settings.text }}</p>
       {%- if section.settings.button_label != blank -%}
         <a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label }}</a>

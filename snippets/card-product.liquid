@@ -162,6 +162,7 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
+            {% render 'ndina-subtitle', product: card_product %}
             <div class="card-information">
               {%- if show_vendor -%}
                 <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
