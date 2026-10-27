@@ -1,4 +1,4 @@
-{%- comment -%} Artist · medium · year line, derived from product tags and description. {%- endcomment -%}
+{%- comment -%} Artist &middot; medium &middot; year line, derived from product tags and description. {%- endcomment -%}
 {%- liquid
   assign nd_artist = ''
   for nd_name in 'Josaia Waqabaca McNamara,Anare Somumu,Mason James Lee' | split: ','
@@ -12,8 +12,8 @@
   if product.tags contains 'flask'
     assign nd_medium = 'Collectible flask'
     assign nd_year = '2026'
-  elsif product.tags contains 'giclée'
-    assign nd_medium = 'Fine art giclée print'
+  elsif product.title contains 'Fine Art Gicl'
+    assign nd_medium = 'Fine art gicl&eacute;e print'
   elsif product.tags contains 'print'
     assign nd_medium = 'Signed inkjet print'
   elsif nd_desc contains ' by '
@@ -31,7 +31,7 @@
 {%- if nd_artist != blank -%}
   <p class="ndina-subtitle">
     {{- nd_artist -}}
-    {%- if nd_medium != blank %} · {{ nd_medium }}{% endif -%}
-    {%- if nd_year != blank %} · {{ nd_year }}{% endif -%}
+    {%- if nd_medium != blank %} &middot; {{ nd_medium }}{% endif -%}
+    {%- if nd_year != blank %} &middot; {{ nd_year }}{% endif -%}
   </p>
 {%- endif -%}

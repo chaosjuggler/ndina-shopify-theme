@@ -4,7 +4,7 @@
       "type": "ndina-hero",
       "settings": {
         "heading": "Contemporary Oceanic Art, Editions, and Objects",
-        "text": "Original, one-of-a-kind works by Fiji's leading artists. NDINA Gallery \u2014 Fiji Islands | Hong Kong.",
+        "text": "Original, one-of-a-kind works by Fiji's leading artists. NDINA Gallery — Fiji Islands | Hong Kong.",
         "button_label": "Shop all works",
         "button_link": "shopify://collections/all"
       }
@@ -74,11 +74,53 @@
         "padding_bottom": 36,
         "heading": "Featured works"
       }
+    },
+    "collections": {
+      "type": "ndina-artists",
+      "blocks": {
+        "c1": {
+          "type": "artist",
+          "settings": {
+            "name": "Avant Series",
+            "subtitle": "Mason James Lee",
+            "image_asset": "collection-avant-series.jpg",
+            "link": "shopify://collections/avant-series"
+          }
+        },
+        "c2": {
+          "type": "artist",
+          "settings": {
+            "name": "Fijian Flora on Masi",
+            "subtitle": "Mason James Lee",
+            "image_asset": "collection-fijian-flora.jpg",
+            "link": "shopify://collections/fijian-flora-on-masi"
+          }
+        },
+        "c3": {
+          "type": "artist",
+          "settings": {
+            "name": "Art of Wisdom",
+            "subtitle": "Josaia Waqabaca McNamara",
+            "image_asset": "collection-art-of-wisdom.jpg",
+            "link": "shopify://collections/art-of-wisdom"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Shop by collection",
+        "square": true
+      }
     }
   },
   "order": [
     "hero",
     "artists",
-    "featured_collection"
+    "featured_collection",
+    "collections"
   ]
 }

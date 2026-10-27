@@ -1,4 +1,4 @@
-<section class="ndina-artists page-width">
+<section class="ndina-artists page-width{% if section.settings.square %} ndina-artists--square{% endif %}">
   <h2 class="ndina-artists__heading">{{ section.settings.heading }}</h2>
   <div class="ndina-artists__grid">
     {%- for block in section.blocks -%}
@@ -7,7 +7,10 @@
           <img src="{{ block.settings.image_asset | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy" width="600" height="700">
         </div>
         <span class="ndina-artist__name">{{ block.settings.name }}</span>
-        <span class="ndina-artist__cta">View works</span>
+        {%- if block.settings.subtitle != blank -%}
+          <span class="ndina-artist__by">{{ block.settings.subtitle }}</span>
+        {%- endif -%}
+        <span class="ndina-artist__cta">Explore</span>
       </a>
     {%- endfor -%}
   </div>
@@ -17,7 +20,8 @@
 {
   "name": "NDINA artist tiles",
   "settings": [
-    { "type": "text", "id": "heading", "label": "Heading", "default": "Shop by artist" }
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Shop by artist" },
+    { "type": "checkbox", "id": "square", "label": "Square image tiles", "default": false }
   ],
   "blocks": [
     {
@@ -25,6 +29,7 @@
       "name": "Artist",
       "settings": [
         { "type": "text", "id": "name", "label": "Name" },
+        { "type": "text", "id": "subtitle", "label": "Second line (e.g. artist name)" },
         { "type": "text", "id": "image_asset", "label": "Image file in theme assets", "default": "artist-josaia.jpg" },
         { "type": "url", "id": "link", "label": "Link" }
       ]
