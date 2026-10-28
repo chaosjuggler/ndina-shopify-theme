@@ -113,7 +113,6 @@
                   {%- elsif ndina_variant.inventory_management and ndina_variant.inventory_quantity == 1 -%}
                     <p class="ndina-edition">One of a kind &middot; original work</p>
                   {%- endif -%}
-                  {% render 'ndina-scale', product: product %}
                 {%- when 'price' -%}
                   <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                     {%- render 'price',
@@ -507,6 +506,7 @@
                     section_id: section.id,
                     show_pickup_availability: true
                   -%}
+                  {% render 'ndina-scale', product: product %}
                 {%- when 'rating' -%}
                   {%- if product.metafields.reviews.rating.value != blank -%}
                     <div class="rating-wrapper">

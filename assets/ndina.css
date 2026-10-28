@@ -72,8 +72,14 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-header-logo { height: 3.6rem; width: auto; display: block; }
 @media (max-width: 749px) { .ndina-header-logo { height: 2.2rem; } .ndina-topbar__inner { padding: 0.8rem 1.6rem; } .ndina-topbar__nav a:first-child { display: none; } }
 
-/* To-scale size visual */
-.ndina-scale{margin:1.6rem 0;padding:1.4rem 0;border-top:1px solid rgba(var(--color-foreground),.15);border-bottom:1px solid rgba(var(--color-foreground),.15);color:rgb(var(--color-foreground))}
-.ndina-scale__title{margin:0 0 .8rem;font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase}
-.ndina-scale__svg{display:block;width:100%;height:auto;max-height:26rem}
+/* To-scale size visual (dropdown) */
+.ndina-scale{margin:1.6rem 0;border-top:1px solid rgba(var(--color-foreground),.15);border-bottom:1px solid rgba(var(--color-foreground),.15);color:rgb(var(--color-foreground))}
+.ndina-scale__summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;padding:1.4rem 0;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase}
+.ndina-scale__summary::-webkit-details-marker{display:none}
+.ndina-scale__icon{position:relative;width:1.2rem;height:1.2rem}
+.ndina-scale__icon::before,.ndina-scale__icon::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor}
+.ndina-scale__icon::after{transform:rotate(90deg);transition:transform .2s}
+.ndina-scale[open] .ndina-scale__icon::after{transform:rotate(0)}
+.ndina-scale__body{padding:0 0 1.6rem}
+.ndina-scale__svg{display:block;width:100%;height:auto}
 .ndina-scale__note{margin:.8rem 0 0;font-size:1.2rem;opacity:.75}
