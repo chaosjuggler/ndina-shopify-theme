@@ -83,3 +83,7 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-scale__body{padding:0 0 1.6rem}
 .ndina-scale__svg{display:block;width:100%;height:auto}
 .ndina-scale__note{margin:.8rem 0 0;font-size:1.2rem;opacity:.75}
+
+/* Sold originals: hide price, show label */
+.ndina-price--sold .price__container{display:none}
+.ndina-sold-label{font-size:1.4rem;letter-spacing:.12em;text-transform:uppercase}

@@ -46,6 +46,7 @@
       price
       {%- if price_class %} {{ price_class }}{% endif -%}
       {%- if available == false %} price--sold-out{% endif -%}
+      {%- if product.tags contains 'sold' %} ndina-price--sold{% endif -%}
       {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
       {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
       {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
@@ -55,6 +56,7 @@
     {%- if product != blank and placeholder != true -%}
       {%- if product.tags contains 'sold' or available == false -%}
         <span class="ndina-dot ndina-dot--sold" role="img" aria-label="Sold" title="Sold"></span>
+        {%- if product.tags contains 'sold' -%}<span class="ndina-sold-label">Sold</span>{%- endif -%}
       {%- else -%}
         <span class="ndina-dot ndina-dot--available" role="img" aria-label="Available" title="Available"></span>
       {%- endif -%}
