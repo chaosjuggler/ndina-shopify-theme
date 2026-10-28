@@ -1,0 +1,80 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<div class="gradient color-{{ section.settings.color_scheme }}">
+  <div class="page-width ndina-works">
+    {%- paginate collection.products by 100 -%}
+      {%- assign c1 = 0 -%}
+      {%- assign c2 = 0 -%}
+      {%- assign c3 = 0 -%}
+      {%- for product in collection.products -%}
+        {%- if product.tags contains 'original' -%}
+          {%- assign c1 = c1 | plus: 1 -%}
+        {%- elsif product.title contains 'Gicl' -%}
+          {%- assign c2 = c2 | plus: 1 -%}
+        {%- else -%}
+          {%- assign c3 = c3 | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- for g in (1..3) -%}
+        {%- assign gc = c1 -%}
+        {%- assign gtitle = 'Original Works' -%}
+        {%- if g == 2 -%}
+          {%- assign gc = c2 -%}
+          {%- assign gtitle = 'Fine Art Gicl&eacute;e Prints' -%}
+        {%- elsif g == 3 -%}
+          {%- assign gc = c3 -%}
+          {%- assign gtitle = 'Signed Prints &amp; Posters' -%}
+        {%- endif -%}
+        {%- if gc > 0 -%}
+          <section class="ndina-works__group">
+            <h2 class="ndina-works__heading">{{ gtitle }}</h2>
+            <ul class="grid product-grid grid--2-col-tablet-down grid--4-col-desktop">
+              {%- for product in collection.products -%}
+                {%- assign pg = 3 -%}
+                {%- if product.tags contains 'original' -%}
+                  {%- assign pg = 1 -%}
+                {%- elsif product.title contains 'Gicl' -%}
+                  {%- assign pg = 2 -%}
+                {%- endif -%}
+                {%- if pg == g -%}
+                  <li class="grid__item">
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: 'adapt',
+                      image_shape: 'default',
+                      show_secondary_image: false,
+                      show_vendor: false,
+                      show_rating: false,
+                      lazy_load: true,
+                      skip_styles: false,
+                      quick_add: 'none',
+                      section_id: section.id,
+                      product_view_context: 'collection'
+                    %}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </section>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Artist works (grouped)",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}
