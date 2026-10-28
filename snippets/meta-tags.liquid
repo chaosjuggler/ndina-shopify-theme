@@ -19,7 +19,19 @@
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:description" content="{{ og_description | escape }}">
 
-{%- if page_image -%}
+{%- liquid
+  assign nd_share = 'ndina-share.jpg' | asset_url
+  assign nd_use_logo = false
+  if page_image == blank or request.page_type == 'index' or request.page_type == 'password' or request.page_type == 'page'
+    assign nd_use_logo = true
+  endif
+-%}
+{%- if nd_use_logo -%}
+  <meta property="og:image" content="https:{{ nd_share | split: '?' | first }}">
+  <meta property="og:image:secure_url" content="https:{{ nd_share | split: '?' | first }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+{%- elsif page_image -%}
   <meta property="og:image" content="http:{{ page_image | image_url }}">
   <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
   <meta property="og:image:width" content="{{ page_image.width }}">
