@@ -1,64 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo_width": 90,
-    "customer_account_menu": "customer-account-main-menu",
-    "color_schemes": {
-      "scheme-1": {
-        "settings": {
-          "background": "#FBF8F3",
-          "background_gradient": "",
-          "text": "#1A1A1A",
-          "button": "#B84A30",
-          "button_label": "#FBF8F3",
-          "secondary_button_label": "#1A1A1A",
-          "shadow": "#1A1A1A"
-        }
-      },
-      "scheme-2": {
-        "settings": {
-          "background": "#F1E9DD",
-          "background_gradient": "",
-          "text": "#1A1A1A",
-          "button": "#1A1A1A",
-          "button_label": "#F1E9DD",
-          "secondary_button_label": "#1A1A1A",
-          "shadow": "#1A1A1A"
-        }
-      },
-      "scheme-3": {
-        "settings": {
-          "background": "#B84A30",
-          "background_gradient": "",
-          "text": "#FBF8F3",
-          "button": "#FBF8F3",
-          "button_label": "#B84A30",
-          "secondary_button_label": "#FBF8F3",
-          "shadow": "#1A1A1A"
-        }
-      },
-      "scheme-4": {
-        "settings": {
-          "background": "#1A1A1A",
-          "background_gradient": "",
-          "text": "#FBF8F3",
-          "button": "#B84A30",
-          "button_label": "#FBF8F3",
-          "secondary_button_label": "#FBF8F3",
-          "shadow": "#1A1A1A"
-        }
-      },
-      "scheme-5": {
-        "settings": {
-          "background": "#E9DECE",
-          "background_gradient": "",
-          "text": "#1A1A1A",
-          "button": "#B84A30",
-          "button_label": "#FBF8F3",
-          "secondary_button_label": "#B84A30",
-          "shadow": "#1A1A1A"
-        }
-      }
-    },
+    "favicon": "shopify://shop_images/Copy_of_NDINA_Logo_explore.png",
     "type_header_font": "jost_n5",
     "heading_scale": 100,
     "type_body_font": "jost_n4",
@@ -157,14 +109,14 @@
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_twitter_link": "",
     "social_facebook_link": "",
-    "social_pinterest_link": "",
     "social_instagram_link": "",
-    "social_tiktok_link": "",
-    "social_tumblr_link": "",
-    "social_snapchat_link": "",
     "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -175,6 +127,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "customer_account_menu": "customer-account-main-menu",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -186,6 +139,64 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "scheme-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#fbf8f3",
+          "background_gradient": "",
+          "text": "#1a1a1a",
+          "button": "#b84a30",
+          "button_label": "#fbf8f3",
+          "secondary_button_label": "#1a1a1a",
+          "shadow": "#1a1a1a"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#f1e9dd",
+          "background_gradient": "",
+          "text": "#1a1a1a",
+          "button": "#1a1a1a",
+          "button_label": "#f1e9dd",
+          "secondary_button_label": "#1a1a1a",
+          "shadow": "#1a1a1a"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#b84a30",
+          "background_gradient": "",
+          "text": "#fbf8f3",
+          "button": "#fbf8f3",
+          "button_label": "#b84a30",
+          "secondary_button_label": "#fbf8f3",
+          "shadow": "#1a1a1a"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "#1a1a1a",
+          "background_gradient": "",
+          "text": "#fbf8f3",
+          "button": "#b84a30",
+          "button_label": "#fbf8f3",
+          "secondary_button_label": "#fbf8f3",
+          "shadow": "#1a1a1a"
+        }
+      },
+      "scheme-5": {
+        "settings": {
+          "background": "#e9dece",
+          "background_gradient": "",
+          "text": "#1a1a1a",
+          "button": "#b84a30",
+          "button_label": "#fbf8f3",
+          "secondary_button_label": "#b84a30",
+          "shadow": "#1a1a1a"
         }
       }
     }
