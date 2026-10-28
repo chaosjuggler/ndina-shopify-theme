@@ -71,3 +71,9 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 /* Header logo */
 .ndina-header-logo { height: 3.6rem; width: auto; display: block; }
 @media (max-width: 749px) { .ndina-header-logo { height: 2.2rem; } .ndina-topbar__inner { padding: 0.8rem 1.6rem; } .ndina-topbar__nav a:first-child { display: none; } }
+
+/* To-scale size visual */
+.ndina-scale{margin:1.6rem 0;padding:1.4rem 0;border-top:1px solid rgba(var(--color-foreground),.15);border-bottom:1px solid rgba(var(--color-foreground),.15);color:rgb(var(--color-foreground))}
+.ndina-scale__title{margin:0 0 .8rem;font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase}
+.ndina-scale__svg{display:block;width:100%;height:auto;max-height:26rem}
+.ndina-scale__note{margin:.8rem 0 0;font-size:1.2rem;opacity:.75}
