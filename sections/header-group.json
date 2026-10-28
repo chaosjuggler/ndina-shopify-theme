@@ -23,7 +23,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Opening offer: 15% off all prints with code MARAUTAKI15 until 1 Jan. Shop editions",
+            "text": "Opening offer: 15% off all prints with code MARAUTAKI15 until 30 Nov. Shop editions",
             "text_alignment": "center",
             "color_scheme": "scheme-1",
             "link": "shopify://collections/editions"

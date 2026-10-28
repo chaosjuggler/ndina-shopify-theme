@@ -95,10 +95,6 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 
 /* Opening offer badge + note */
 .card__inner{position:relative}
-.ndina-offer-badge{position:absolute;top:1rem;right:1rem;z-index:3;padding:.5rem 1rem;font-size:1.2rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#B84A30;overflow:hidden;pointer-events:none}
-.ndina-offer-badge::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:ndinaOfferShimmer 2.8s ease-in-out infinite}
-@keyframes ndinaOfferShimmer{0%{left:-60%}60%,100%{left:140%}}
-@media(prefers-reduced-motion:reduce){.ndina-offer-badge::after{animation:none}}
 .ndina-offer-note{margin:1.6rem 0;padding:1.4rem 1.6rem;border:1px solid #B84A30;background:rgba(184,74,48,.06)}
 .ndina-offer-note p{margin:0}
 .ndina-offer-note__title{font-size:1.4rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#B84A30}
@@ -117,3 +113,4 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-offer-note__title{font-size:1.15rem;letter-spacing:.09em}
 .ndina-offer-note__code{margin-top:.2rem!important;font-size:1.2rem}
 .ndina-offer-note__fine{margin-top:.3rem!important;font-size:1.05rem}
+.ndina-price-off{margin-left:.6rem;font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ndina-terracotta,#B84A30)}

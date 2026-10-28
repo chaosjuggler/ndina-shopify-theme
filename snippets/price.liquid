@@ -95,7 +95,7 @@
         {%- else -%}
           {%- assign nd_now = 'now' | date: '%s' | plus: 0 -%}
           {%- assign nd_offer_on = false -%}
-          {%- if nd_now < 1798736400 and product.tags contains 'editions' and available and product.price_varies == false -%}
+          {%- if nd_now < 1796058000 and product.tags contains 'editions' and available and product.price_varies == false -%}
             {%- unless product.tags contains 'sold' -%}{%- assign nd_offer_on = true -%}{%- endunless -%}
           {%- endif -%}
           {%- if nd_offer_on -%}
@@ -109,6 +109,7 @@
             <s class="price-item ndina-price-was">{{ money_price }}</s>
             <span class="visually-hidden visually-hidden--inline">Price with 15 percent off code MARAUTAKI15</span>
             <span class="price-item price-item--regular ndina-price-now">{{ nd_offer_money }}</span>
+            <span class="ndina-price-off">15% off</span>
           {%- else -%}
             <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
             <span class="price-item price-item--regular">
