@@ -93,10 +93,28 @@
             -}}
           </span>
         {%- else -%}
-          <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-item price-item--regular">
-            {{ money_price }}
-          </span>
+          {%- assign nd_now = 'now' | date: '%s' | plus: 0 -%}
+          {%- assign nd_offer_on = false -%}
+          {%- if nd_now < 1798736400 and product.tags contains 'editions' and available and product.price_varies == false -%}
+            {%- unless product.tags contains 'sold' -%}{%- assign nd_offer_on = true -%}{%- endunless -%}
+          {%- endif -%}
+          {%- if nd_offer_on -%}
+            {%- assign nd_offer_price = price | times: 85 | divided_by: 100 -%}
+            {%- if settings.currency_code_enabled -%}
+              {%- assign nd_offer_money = nd_offer_price | money_with_currency -%}
+            {%- else -%}
+              {%- assign nd_offer_money = nd_offer_price | money -%}
+            {%- endif -%}
+            <span class="visually-hidden visually-hidden--inline">Regular price</span>
+            <s class="price-item ndina-price-was">{{ money_price }}</s>
+            <span class="visually-hidden visually-hidden--inline">Price with 15 percent off code MARAUTAKI15</span>
+            <span class="price-item price-item--regular ndina-price-now">{{ nd_offer_money }}</span>
+          {%- else -%}
+            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+            <span class="price-item price-item--regular">
+              {{ money_price }}
+            </span>
+          {%- endif -%}
         {%- endif -%}
       </div>
       <div class="price__sale">
