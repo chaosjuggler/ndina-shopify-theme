@@ -5,10 +5,24 @@
     </a>
     <nav class="ndina-topbar__nav" aria-label="Site">
       <a href="{{ section.settings.home_url }}">ndina.gallery</a>
+      <label class="ndina-cur" data-no-currency>
+        <span class="visually-hidden">Currency</span>
+        <select id="ndina-cur-select" aria-label="Display currency">
+          <option value="USD">USD</option>
+          <option value="NZD">NZD</option>
+          <option value="AUD">AUD</option>
+          <option value="GBP">GBP</option>
+          <option value="FJD">FJD</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+          <option value="THB">THB</option>
+        </select>
+      </label>
       <a class="ndina-topbar__bag" href="{{ routes.cart_url }}">Bag ({{ cart.item_count }})</a>
     </nav>
   </div>
 </div>
+<p id="ndina-cur-notice" class="ndina-cur-notice" role="status" hidden></p>
 
 {% schema %}
 {
