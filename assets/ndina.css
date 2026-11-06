@@ -114,3 +114,10 @@ h1, h2, h3, .h0, .h1, .h2, .h3 { letter-spacing: 0.04em; text-transform: upperca
 .ndina-offer-note__code{margin-top:.2rem!important;font-size:1.2rem}
 .ndina-offer-note__fine{margin-top:.3rem!important;font-size:1.05rem}
 .ndina-price-off{margin-left:.6rem;font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ndina-terracotta,#B84A30)}
+
+/* Currency tab (display only, checkout is USD) */
+.ndina-cur select{font:inherit;font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;color:#1A1A1A;background:transparent;border:1px solid rgba(26,26,26,.35);padding:.55rem .8rem;border-radius:0;cursor:pointer}
+.ndina-cur select:hover,.ndina-cur select:focus-visible{border-color:var(--ndina-terracotta,#B84A30)}
+.ndina-cur-notice{margin:0;padding:.7rem 2rem;text-align:center;font-size:1.2rem;background:#F1EBE0;color:#1A1A1A}
+.ndina-cur-notice[hidden]{display:none}
+@media (max-width:749px){.ndina-topbar__nav{gap:1.2rem}.ndina-cur-notice{padding:.7rem 1.6rem}}
