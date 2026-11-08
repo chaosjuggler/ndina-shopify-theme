@@ -23,10 +23,10 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Opening offer: 15% off all prints with code MARAUTAKI15 until 30 Nov. Shop editions",
+            "text": "Opening offer: 15% off all fine art giclée prints with code MARAUTAKI15 until 30 Nov. Shop giclée prints",
             "text_alignment": "center",
             "color_scheme": "scheme-1",
-            "link": "shopify://collections/editions"
+            "link": "shopify://collections/fine-art-giclee-prints"
           }
         }
       },
